@@ -1,0 +1,203 @@
+cd api-crud		# entrar na pasta api-crud
+cd..			# navegar para a pasta anterior
+
+npm init -y		# criar o arquivo package.json
+
+npm install express	# instalar a biblioteca express. Roteamento
+
+node app.js		# executar o projeto
+
+
+npm install -g nodemon		# Instalar como global. Se der ruim, execute o código abaixo:
+npm uninstall -g nodemon 	# remover a dependência do global
+
+npm install -D nodemon		# instalar como dependência local ou do projeto
+ou
+npm install --save-dev nodemon
+
+
+{
+	"nome": "Mouse Logi",
+	"preco": 99.99
+}
+
+
+npx nodemon app.js
+
+
+
+
+IP
+https://nodejs.org/docs/latest/api/
+
+
+3 5 6 8 10 13 17 20 60 81 88 91 99 101 103
+x
+
+
+http://127.0.0.1:5500/crud-front/index.html
+
+http://localhost:3000/produtos
+
+- Relacionais (SQL)
+Oracle
+SQL Server
+PostgreSQL
+MySQL / MariaDB
+
+- NoSQL
+MongoDB
+Cassandra
+Redis
+
+financeiro_db
+
+DDL: create, alter, drop
+
+int = 
+decimal, double, float, real
+varchar
+date
+datetime
+bool
+
+CREATE TABLE usuarios(
+	id SERIAL primary key,
+	nome varchar(255),
+	email varchar(255) UNIQUE,
+	senha varchar(255)
+);
+CREATE TABLE financeiros(
+	id SERIAL primary key,
+	descricao varchar(255),
+	formaPagamento varchar(255),
+	valor real,
+	tipo varchar(50),
+	usuarioId integer,
+	CONSTRAINT fk_usuario FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
+);
+
+
+DML
+POST
+INSERT INTO usuarios (nome,email,senha) VALUES('Maria da Silva','oi@oi.com','12345');
+
+
+GET
+SELECT * FROM usuarios WHERE id=1;
+
+PUT
+UPDATE usuarios SET email='novo@email.com' WHERE id=1;
+
+DELETE
+DELETE FROM usuarios WHERE id=1;
+
+financeiro_orm
+
+
+01
+01
+
+
+npm install express cors nodemon pg pg-hstore
+npm install bcryptjs dotenv sequelize jsonwebtoken
+
+
+
+
+PascalCase = Classe e Métodos ( ConexaoBanco )
+camelCase = Variáveis (JS) ( conaxaoBanco )
+kebab-case = HTML e CSS, nomes de arquivos conexao-banco
+snake_case = Python conexao_banco
+
+
+# Fluxo de execução
+
+app.js -> financeiroRoutes.js -> financeiroController.js   
+				  -> models/financeiro.js
+
+
+
+
+
+
+
+{
+	"data": "2025-11-17",
+	"descricao": "Pagamento do carro",
+	"formaPagamento": "Pix",
+	"valor": 2000,
+	"tipo": "saida"
+}
+
+
+[
+	{
+		"id": 1,
+		"data": "2025-11-17T00:00:00.000Z",
+		"descricao": "Pagamento do carro",
+		"formaPagamento": "Pix",
+		"valor": 2000,
+		"tipo": "saida",
+		"createdAt": "2025-11-18T01:10:10.268Z",
+		"updatedAt": "2025-11-18T01:10:10.268Z"
+	},
+	{
+		"id": 2,
+		"data": "2025-11-17T00:00:00.000Z",
+		"descricao": "Vale do mês",
+		"formaPagamento": "Pix",
+		"valor": 6000,
+		"tipo": "entrada",
+		"createdAt": "2025-11-19T22:28:26.389Z",
+		"updatedAt": "2025-11-19T22:28:26.389Z"
+	}
+]
+
+
+
+
+ALTER TABLE financeiro DROP COLUMN usuarioid;
+
+
+ALTER TABLE financeiro ADD COLUMN "usuarioId" INTEGER;
+
+
+{
+	"nome": "Luis",
+	"email": "oi@luis.com",
+	"senha": "123456"
+}
+
+{
+	"id": 1,
+	"nome": "Luis",
+	"email": "oi@luis.com",
+	"senha": "$2b$10$hguqyUDVUG/EsGCiJZ2Qiu6RYj3kKh4CkRTEcbof8rfL9fM/8CeSW",
+	"updatedAt": "2025-11-25T00:19:43.180Z",
+	"createdAt": "2025-11-25T00:19:43.180Z"
+}
+
+{
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0MDMxOTQwfQ.QpvuL8FQVwqoIY5ePqjNf0NAG_QdwFw0Sghrc288boc"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
